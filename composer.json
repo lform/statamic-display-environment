@@ -1,0 +1,29 @@
+{
+    "name": "lform/env-detector",
+    "autoload": {
+        "psr-4": {
+            "Lform\\EnvDetector\\": "src"
+        }
+    },
+    "require": {
+        "statamic/cms": "^5.0"
+    },
+    "config": {
+        "allow-plugins": {
+            "pixelfear/composer-dist-plugin": true
+        }
+    },
+    "extra": {
+        "statamic": {
+            "name": "Env Detector",
+            "description": "Env Detector addon"
+        },
+        "laravel": {
+            "providers": [
+                "Lform\\EnvDetector\\ServiceProvider"
+            ]
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
