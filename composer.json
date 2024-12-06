@@ -1,8 +1,8 @@
 {
-    "name": "lform/env-detector",
+    "name": "lform/statamic-display-environment",
     "autoload": {
         "psr-4": {
-            "Lform\\EnvDetector\\": "src"
+            "Lform\\EnvDisplay\\": "src"
         }
     },
     "require": {
@@ -15,12 +15,12 @@
     },
     "extra": {
         "statamic": {
-            "name": "Env Detector",
-            "description": "Env Detector addon"
+            "name": "Display Environment",
+            "description": "Env Display Addon For Statamic Control Panel"
         },
         "laravel": {
             "providers": [
-                "Lform\\EnvDetector\\ServiceProvider"
+                "Lform\\EnvDisplay\\ServiceProvider"
             ]
         }
     },

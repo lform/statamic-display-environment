@@ -1,18 +1,18 @@
 <?php
 
-namespace Lform\EnvDetector;
+namespace Lform\EnvDisplay;
 
-use Lform\EnvDetector\Middleware\InjectDetector;
+use Lform\EnvDisplay\Middleware\InjectDisplay;
 use Statamic\Providers\AddonServiceProvider;
 
 class ServiceProvider extends AddonServiceProvider
 {
     public function bootAddon()
     {
-        if (! file_exists(config_path('env-detector.php'))) {
+        if (! file_exists(config_path('env-display.php'))) {
             $this->publishes([
-                __DIR__ . '/../config/env-detector.php' => config_path('env-detector.php'),
-            ], 'env-detector');
+                __DIR__ . '/../config/env-display.php' => config_path('env-display.php'),
+            ], 'env-display');
         }
 
         $this
@@ -22,14 +22,14 @@ class ServiceProvider extends AddonServiceProvider
 
     protected function bootAddonViews(): self
     {
-        $this->loadViewsFrom(__DIR__ . '/../resources/views', 'lform-env-detector');
+        $this->loadViewsFrom(__DIR__ . '/../resources/views', 'lform-env-display');
 
         return $this;
     }
 
     protected function bootAddonMiddleware(): self
     {
-        $this->app['router']->pushMiddlewareToGroup('statamic.cp', InjectDetector::class);
+        $this->app['router']->pushMiddlewareToGroup('statamic.cp', InjectDisplay::class);
 
         return $this;
     }
