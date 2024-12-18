@@ -1,13 +1,13 @@
 <?php
 
-namespace Lform\EnvDetector\Middleware;
+namespace Lform\EnvDisplay\Middleware;
 
 use Closure;
 use Illuminate\Support\Facades\Log;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 
-class InjectDetector
+class InjectDisplay
 {
     public function handle($request, Closure $next)
     {

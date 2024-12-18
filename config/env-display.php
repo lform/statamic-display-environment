@@ -12,7 +12,7 @@ return [
     |
     */
 
-    'detect' => [
+    'display' => [
 
         'local' => [
             'text' => "#000000",
